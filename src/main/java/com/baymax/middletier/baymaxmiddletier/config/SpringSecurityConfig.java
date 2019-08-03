@@ -18,7 +18,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        http.authorizeRequests()
+        http.authorizeRequests().antMatchers("/").permitAll();
+        /*
+                http.authorizeRequests()
                 .antMatchers("/api/public/**","/search/address/**")
                 .permitAll()
                 .antMatchers("/api/private/**").access("hasRole('PRIVATE_USER')")
@@ -29,6 +31,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().disable()
                 .csrf().disable()
                 .cors().disable();
+         */
     }
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
