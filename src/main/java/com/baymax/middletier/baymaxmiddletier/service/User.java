@@ -1,18 +1,16 @@
 package com.baymax.middletier.baymaxmiddletier.service;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-
+    @NonNull
     private String UserID;
+    @NonNull
     private String name;
     private String Location;
     private String Verification;
