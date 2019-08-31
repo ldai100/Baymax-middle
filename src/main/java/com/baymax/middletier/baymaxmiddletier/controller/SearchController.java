@@ -23,4 +23,5 @@ public class SearchController {
         return searchService.searchDayCareByAddress(address);
     }
 
+
 }
