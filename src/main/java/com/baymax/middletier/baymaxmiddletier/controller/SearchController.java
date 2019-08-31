@@ -17,9 +17,8 @@ public class SearchController {
     SearchService searchService;
 
 
-    @RequestMapping(value = "/address/{address}", method = GET)
+    @RequestMapping(value = "/address", method = GET)
     public List<DayCare> searchByAddress(@PathVariable("address")String address){
-
         searchService.searchDayCareByAddress(address);
         return searchService.searchDayCareByAddress(address);
     }
